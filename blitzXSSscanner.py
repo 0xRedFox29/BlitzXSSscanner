@@ -62,7 +62,10 @@ def generate_html_report(folder_path, vulnerable_payloads):
         </style>
     </head>
     <body>
-        <h2>XSS Vulnerability Report</h2>
+        <center>
+            <h2>XSS Vulnerability Report</h2>
+            <h4>Daftar Payload pemicu pop up</h4>
+        </center>
         <table>
             <thead>
                 <tr>
@@ -108,7 +111,7 @@ def scan_xss(driver, url, payloads, request_type='GET', post_parameter=None):
         try:
             if request_type.upper() == 'POST' and post_parameter:
                 driver.get(url)
-                input_element = driver.find_element(By.NAME, post_parameter)
+                input_element = driver.find_element(By.NAME, post_parameter) # fitur komentar, userprofile, dsb
                 input_element.clear()
                 input_element.send_keys(payload)
                 input_element.submit()
@@ -145,7 +148,7 @@ def scan_xss(driver, url, payloads, request_type='GET', post_parameter=None):
 if __name__ == "__main__":
     banner()
 
-    file_path = 'C:/Users/Spart/OneDrive/Desktop/XSSscaner/payloadxss.txt'
+    file_path = 'C:/path/path/path/path/XSSscaner/payloadxss.txt' #sesuaikan dengan file path anda
     user_profile = os.getenv('USERPROFILE')  
     save_folder_path = os.path.join(user_profile, f'XSS_Reports_{datetime.now().strftime("%Y%m%d_%H%M%S")}')
     os.makedirs(save_folder_path, exist_ok=True)
