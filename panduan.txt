@@ -1,12 +1,20 @@
 LANGKAH-LANGKAH PENGGUNAAN BLITZ XSS SCANNER
 
 1. Unduh file blitzxssscanner.py atau copy kode program
-2. Pastikan memiliki text editor seperti VS Code (rekomendasi)
-3. Mengunduh ChromeDriver dan python 3.11 di microsoft store 
-4. run kode program 
-5. ketik "pip install selenium colorama" di terminal (tanpa tanda kutip)
+2. Unduh ChromeDriver Download di google chrome dan python 3.11 di microsoft store
+3. Pastikan memiliki text editor seperti VS Code (rekomendasi)
+4. di file manager, buat folder (misal blitzxssscanner)
+5. buka text editor VS Code
+6. pilih folder yang sudah dibuat
+7. buat file dengan nama (misal blitzxssscaner.py)
+8. copy dan paste kan kode program dari github ini
+9. run kode program 
+5. ketik "pip install selenium colorama", "pip install chromedriver" dan "pip install webdriver-manager"
+   di terminal VS code (tanpa tanda kutip satu per satu perintah)
+6. klik enter
 6. tunggu sampai selesai
-7. running tools dengan nama python namafile.py
+7. running tools dengan ketik python namafile.py lalu klik enter
+8. masukkan URL web target (misal GET method)
 
 jika ingin menjalankan di CMD atau powershell bisa sesuaikan dengan file path
 contoh: 
