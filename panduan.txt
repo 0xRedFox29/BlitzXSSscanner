@@ -21,10 +21,10 @@ contoh:
 
 tampilan di CMD/powershell
 
-C:/Users/Kunxs>cd OneDrive
-C:/Users/Kunxs/OneDrive>cd Desktop
-C:/Users/Kunxs/OneDrive/Desktop>cd BlitzXSSscanner
-C:/Users/Kunxs/OneDrive/Desktop/BlitzXSSscanner>python XSSscanpy.py
+PS C:/Users/Kunxs>cd OneDrive
+PS C:/Users/Kunxs/OneDrive>cd Desktop
+PS C:/Users/Kunxs/OneDrive/Desktop>cd BlitzXSSscanner
+PS C:/Users/Kunxs/OneDrive/Desktop/BlitzXSSscanner>python XSSscanpy.py
 ██████╗ ██╗     ██╗████████╗███████╗    ██╗  ██╗███████╗███████╗    ███████╗ ██████╗ █████╗ ███╗   ██╗███╗   ██╗███████╗██████╗
 ██╔══██╗██║     ██║╚══██╔══╝╚══███╔╝    ╚██╗██╔╝██╔════╝██╔════╝    ██╔════╝██╔════╝██╔══██╗████╗  ██║████╗  ██║██╔════╝██╔══██╗
 ██████╔╝██║     ██║   ██║     ███╔╝      ╚███╔╝ ███████╗███████╗    ███████╗██║     ███████║██╔██╗ ██║██╔██╗ ██║█████╗  ██████╔╝
