@@ -1,9 +1,9 @@
 LANGKAH-LANGKAH PENGGUNAAN BLITZ XSS SCANNER
 
 1. Unduh file blitzxssscanner.py atau copy kode program
-2. Unduh ChromeDriver Download di google chrome dan python 3.11 di microsoft store
+2. Unduh ChromeDriver Download di google chrome dan python 3.11 or highest di microsoft store
 3. Pastikan memiliki text editor seperti VS Code (rekomendasi)
-4. di file manager, buat folder (misal blitzxssscanner)
+4. di file manager, buat folder (misal blitzxssscanner), file scanner dan file payload berada dalam satu folder
 5. buka text editor VS Code
 6. pilih folder yang sudah dibuat
 7. buat file dengan nama (misal blitzxssscaner.py)
@@ -16,14 +16,23 @@ LANGKAH-LANGKAH PENGGUNAAN BLITZ XSS SCANNER
 7. running tools dengan ketik python namafile.py lalu klik enter
 8. masukkan URL web target (misal GET method)
 
-jika ingin menjalankan di CMD atau powershell bisa sesuaikan dengan file path
+jika ingin menjalankan di CMD atau powershell bisa sesuaikan dengan file path 
 contoh: 
- 
-C:/Users/Spart/OneDrive/Desktop/XSSscaner/python XSSscanpy.py
 
-tampilan di CMD
+tampilan di CMD/powershell
 
-C:/Users/Spart>cd OneDrive
-C:/Users/Spart/OneDrive>cd Desktop
-C:/Users/Spart/OneDrive/Desktop>cd XSSscaner
-C:/Users/Spart/OneDrive/Desktop/XSSscaner>python XSSscanpy.py
+C:/Users/Kunxs>cd OneDrive
+C:/Users/Kunxs/OneDrive>cd Desktop
+C:/Users/Kunxs/OneDrive/Desktop>cd BlitzXSSscanner
+C:/Users/Kunxs/OneDrive/Desktop/BlitzXSSscanner>python XSSscanpy.py
+██████╗ ██╗     ██╗████████╗███████╗    ██╗  ██╗███████╗███████╗    ███████╗ ██████╗ █████╗ ███╗   ██╗███╗   ██╗███████╗██████╗
+██╔══██╗██║     ██║╚══██╔══╝╚══███╔╝    ╚██╗██╔╝██╔════╝██╔════╝    ██╔════╝██╔════╝██╔══██╗████╗  ██║████╗  ██║██╔════╝██╔══██╗
+██████╔╝██║     ██║   ██║     ███╔╝      ╚███╔╝ ███████╗███████╗    ███████╗██║     ███████║██╔██╗ ██║██╔██╗ ██║█████╗  ██████╔╝
+██╔══██╗██║     ██║   ██║    ███╔╝       ██╔██╗ ╚════██║╚════██║    ╚════██║██║     ██╔══██║██║╚██╗██║██║╚██╗██║██╔══╝  ██╔══██╗
+██████╔╝███████╗██║   ██║   ███████╗    ██╔╝ ██╗███████║███████║    ███████║╚██████╗██║  ██║██║ ╚████║██║ ╚████║███████╗██║  ██║
+╚═════╝ ╚══════╝╚═╝   ╚═╝   ╚══════╝    ╚═╝  ╚═╝╚══════╝╚══════╝    ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝
+
+
+                 BLITZ XSS SCANNER
+               Managed by: 0xRedFox29
+Masukan Nama Target (example: https://example.com/search?q=): 
