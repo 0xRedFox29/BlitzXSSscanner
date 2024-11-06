@@ -7,14 +7,19 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 import webbrowser
 import html
 import logging
 from datetime import datetime
+from selenium.webdriver.remote.remote_connection import LOGGER
 
+LOGGER.setLevel(logging.WARNING)
+ 
 colorama.init(autoreset=True)
 
-# Pengaturan logging
+# Pengaturan logging 
 logging.basicConfig(filename='xss_scanner.log', level=logging.INFO, 
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -53,16 +58,18 @@ def generate_html_report(folder_path, vulnerable_payloads):
         <title>XSS Vulnerability Report</title>
         <style>
             body { font-family: Arial, sans-serif; background-color: #000000; color: #ffffff; }
-            table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-            th, td { border: 1px solid #555555; padding: 10px; text-align: left; }
+            table { width: 90%; max-width: 800px; border-collapse: collapse; margin: 20px auto; }
+            th, td { border: 1px solid #555555; padding: 8px; text-align: left; }
             th { background-color: #333333; }
             tr:nth-child(even) { background-color: #1a1a1a; }
             tr:nth-child(odd) { background-color: #262626; }
-            img { max-width: 300px; height: auto; }
+            img { max-width: 200px; height: auto; }
+            h2, h4 { text-align: center; }
         </style>
     </head>
     <body>
         <center>
+            <img src="https://i.ibb.co.com/4J56yFs/156761831-886338772205545-7289783883345436896-n.jpg" alt="156761831-886338772205545-7289783883345436896-n" border="0">
             <h2>XSS Vulnerability Report</h2>
             <h4>Daftar Payload pemicu pop up</h4>
         </center>
@@ -78,7 +85,7 @@ def generate_html_report(folder_path, vulnerable_payloads):
             <tbody>
     """
     
-    # Menambahkan payload yang rentan ke dalam tabel HTML
+    # Menambahkan daftar payload terpilih ke dalam tabel HTML
     if vulnerable_payloads:
         for item in vulnerable_payloads:
             html_content += f'''
@@ -105,13 +112,13 @@ def generate_html_report(folder_path, vulnerable_payloads):
 # Memindai URL terhadap XSS
 def scan_xss(driver, url, payloads, request_type='GET', post_parameter=None):
     vulnerable_payloads = []
-    print(f"Scanning {url} for XSS Vulnerability...")
+    print(f"Memindai {url} untuk kerentanan XSS...")
 
     for payload in payloads:
         try:
             if request_type.upper() == 'POST' and post_parameter:
                 driver.get(url)
-                input_element = driver.find_element(By.NAME, post_parameter) # fitur komentar, userprofile, dsb
+                input_element = driver.find_element(By.NAME, post_parameter)
                 input_element.clear()
                 input_element.send_keys(payload)
                 input_element.submit()
@@ -126,7 +133,7 @@ def scan_xss(driver, url, payloads, request_type='GET', post_parameter=None):
                     WebDriverWait(driver, 5).until(EC.alert_is_present())
                     alert = driver.switch_to.alert
                     alert.accept()
-                    print(f"\033[92m [+]Pop up alert found: {payload}\033[0m")
+                    print(f"\033[92m [+]Pop up alert Ditemukan: {payload}\033[0m")
                     
                     screenshot_path = os.path.join(os.getenv('USERPROFILE'), f"screenshot_{int(time.time())}.png")
                     driver.save_screenshot(screenshot_path)
@@ -140,7 +147,7 @@ def scan_xss(driver, url, payloads, request_type='GET', post_parameter=None):
                 except:
                     break
         except Exception as e:
-            logging.error(f"Error while scanning payload {payload}: {e}")
+            logging.error(f"Error saat memindai payload {payload}: {e}")
             continue
     
     return vulnerable_payloads
@@ -148,31 +155,33 @@ def scan_xss(driver, url, payloads, request_type='GET', post_parameter=None):
 if __name__ == "__main__":
     banner()
 
-    file_path = 'C:/path/path/path/path/XSSscaner/payloadxss.txt' #sesuaikan dengan file path anda
+    file_path = 'C:/path/path/path/path/XSSscaner/payloadxss.txt'
     user_profile = os.getenv('USERPROFILE')  
     save_folder_path = os.path.join(user_profile, f'XSS_Reports_{datetime.now().strftime("%Y%m%d_%H%M%S")}')
     os.makedirs(save_folder_path, exist_ok=True)
     
     xss_payloads = read_payloads(file_path)
-    target_url = input(Fore.CYAN + "Input Your Target Here (example: https://example.com/search?q=): " + Fore.RESET)
+    target_url = input(Fore.CYAN + "Masukan Nama Target (example: https://example.com/search?q=): " + Fore.RESET)
     
     request_type = input(Fore.YELLOW + "Request Type (GET/POST): " + Fore.RESET).strip().upper()
     
     post_parameter = None
     if request_type == "POST":
-        post_parameter = input(Fore.YELLOW + "Enter POST parameter name: " + Fore.RESET).strip()
+        post_parameter = input(Fore.YELLOW + "Masukan nama parameter POST: " + Fore.RESET).strip()
 
     options = webdriver.ChromeOptions()
     options.add_argument("--headless")
-    
-    driver = webdriver.Chrome(options=options)  
+    options.add_argument("--log-level=3")  
 
+    # Menyiapkan layanan untuk ChromeDriver 
+    service = Service(ChromeDriverManager().install())
+    driver = webdriver.Chrome(service=service, options=options)  
+    
     try:
         vulnerable_payloads = scan_xss(driver, target_url, xss_payloads, request_type, post_parameter)
         report_file_path = generate_html_report(save_folder_path, vulnerable_payloads)
         
-        print(f"Laporan kerentanan XSS berhasil disimpan di: {report_file_path}")
-        webbrowser.open('file:///' + report_file_path.replace('\\', '/'))
-        
+        print(f"\n{Fore.GREEN}Scanning Selesai! Laporan disimpan di: {report_file_path}{Fore.RESET}")
+        webbrowser.open(f'file:///{report_file_path}')
     finally:
         driver.quit()
